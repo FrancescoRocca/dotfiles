@@ -1,0 +1,2 @@
+[language-server.clangd]
+args = ["--header-insertion=never"]
