@@ -1,2 +1,6 @@
+[[language]]
+name = "c"
+indent = { tab-width = 4, unit = "\t" }
+
 [language-server.clangd]
 args = ["--header-insertion=never"]

@@ -4,6 +4,11 @@ theme = "focus_nova"
 line-number = "relative"
 cursorline = true
 color-modes = true
+auto-pairs = true
+scrolloff = 3
+rulers = [80, 120]
+idle-timeout = 200
+completion-trigger-len = 1
 
 [editor.cursor-shape]
 insert = "bar"
@@ -12,12 +17,26 @@ select = "underline"
 
 [editor.indent-guides]
 render = true
+character = "│"
+skip-levels = 1
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+center = ["diagnostics"]
+right = ["file-type", "position"]
+
+[editor.lsp]
+display-messages = true
+auto-signature-help = true
+display-inlay-hints = true
 
 [keys.normal]
 C-right = "move_next_word_start"
 C-left = "move_prev_word_end"
+C-s = ":w"
+C-q = ":q"
 
 [keys.insert]
 C-right = "move_next_word_start"
 C-left = "move_prev_word_end"
-
+C-s = ":w"
