@@ -1,0 +1,42 @@
+add_newline = false
+format = """
+$username$directory$git_branch$character
+"""
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol   = "[➜](bold red)"
+
+[username]
+show_always = true
+format = "[$user](bold cyan) "
+
+[directory]
+truncation_length = 3
+style = "bold white"
+format = "[$path]($style) "
+
+[git_branch]
+format = "([$branch]) "
+style = "bold purple"
+
+[battery]
+disabled = true
+
+[jobs]
+disabled = true
+
+[package]
+disabled = true
+
+[conda]
+disabled = true
+
+[time]
+disabled = true
+
+[hostname]
+disabled = true
+
+[env_var]
+disabled = true
