@@ -1,42 +1,32 @@
 add_newline = false
+
 format = """
-$username$directory$git_branch$character
+$username\
+$directory\
+$git_branch\
+$git_status\
+$character
 """
 
 [character]
-success_symbol = "[➜](bold green)"
-error_symbol   = "[➜](bold red)"
+success_symbol = " [➜](bold green)"
+error_symbol = " [➜](bold red)"
+vimcmd_symbol = " [❮](bold green)"
 
 [username]
 show_always = true
-format = "[$user](bold cyan) "
+format = "[$user](bold cyan)"
 
 [directory]
 truncation_length = 3
 style = "bold white"
-format = "[$path]($style) "
+format = " [$path]($style)"
 
 [git_branch]
-format = "([$branch]) "
+symbol = " "
 style = "bold purple"
+format = " on [$symbol$branch]($style)"
 
-[battery]
-disabled = true
-
-[jobs]
-disabled = true
-
-[package]
-disabled = true
-
-[conda]
-disabled = true
-
-[time]
-disabled = true
-
-[hostname]
-disabled = true
-
-[env_var]
-disabled = true
+[git_status]
+style = "bold red"
+format = '([\[$all_status$ahead_behind\]]($style))'
